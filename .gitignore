@@ -1,0 +1,15 @@
+*.iml
+.idea
+target
+node_modules
+*.log
+build
+coverage
+.DS_Store
+flow-coverage
+videos
+.project
+.classpath
+.factorypath
+.settings
+application-local.yml
