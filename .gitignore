@@ -1,15 +1,12 @@
 *.iml
 .idea
-target
 node_modules
-*.log
+dist
 build
 coverage
 .DS_Store
 flow-coverage
 videos
 .project
-.classpath
 .factorypath
 .settings
-application-local.yml
