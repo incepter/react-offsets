@@ -1,7 +1,7 @@
 import React from 'react';
 
 function safelyCloneAndGetOffsets(node) {
-    const { innerText } = node;
+    const innerText = node?.innerText;
     const temporaryNode = node.cloneNode();
     temporaryNode.innerText = innerText;
     temporaryNode.style.display = 'block';
@@ -58,7 +58,7 @@ function useNodeOffsets(ref) {
     const [nodeOffsets, setNodeOffsets] = React.useState(realNodeOffsets);
     React.useLayoutEffect(() => {
         const node = ref.current;
-        const { innerText } = node;
+        const innerText = node?.innerText;
         // this means, it contains text but invisible (offsets === 0)
         if (areOffsetsZero(nodeOffsets) && innerText?.length > 0) {
             const offsets = getInvisibleNodeOffsets(ref.current);
